@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: kafka-producer-consumer
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: group-id
+      auto-offset-reset: earliest
+    producer:
+      retries: 3
+    template:
+      default-topic: transaction-topic
+
+logging:
+  level:
+    root: WARN
+    org.springframework.kafka: WARN
+    com:
+      vcarrin87:
+        kafka_producer_consumer: INFO
+
+server:
+  port: 8084

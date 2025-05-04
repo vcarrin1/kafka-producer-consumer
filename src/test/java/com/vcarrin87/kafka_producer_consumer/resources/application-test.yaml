@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: kafka-producer-consumer
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: test-group
+      auto-offset-reset: earliest
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.vcarrin87.kafka_producer_consumer.models"
+    producer:
+      retries: 3
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    template:
+      default-topic: test-topic
+
+server:
+  port: 5000
+
+logging:
+  level:
+    root: WARN
+    org.springframework.kafka: WARN
+    com:
+      vcarrin87:
+        kafka_producer_consumer: INFO

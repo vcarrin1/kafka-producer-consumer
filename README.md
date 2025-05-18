@@ -3,6 +3,19 @@
 This project demonstrates how to implement a Kafka producer and consumer using Java and Maven.
 We run Zooperkeeper and Kafka using docker compose. 
 
+# Getting Started
+
+### Swagger-UI
+
+Swagger UI provides a web-based interface to visualize and interact with the API's endpoints.
+To access Swagger UI:
+1. Start the application server.
+2. Open a web browser.
+3. Navigate to the Swagger UI URL, typically in the format: `http://<server_address>:8084/swagger-ui/index.html`.
+4. Use the interface to explore available API endpoints, view request/response schemas, and test API calls.
+
+![swagger-ui](src/main/resources/static/swagger-ui.png)
+
 ### POST /events/publish-message
 
 This endpoint sends a message to a Kafka topic.
@@ -19,22 +32,6 @@ This endpoint sends a message to a Kafka topic.
 ```
 
 ![publish-consume-example](src/main/resources/static/image.png)
-
-### Reference Documentation
-For further reference, please consider the following sections:
-
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.4.5/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.4.5/maven-plugin/build-image.html)
-* [Spring for Apache Kafka](https://docs.spring.io/spring-boot/3.4.5/reference/messaging/kafka.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.4.5/reference/web/servlet.html)
-
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 
 ## Testing
 ### Run all tests
